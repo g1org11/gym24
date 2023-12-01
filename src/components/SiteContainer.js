@@ -11,4 +11,9 @@ const SiteContainer = () => {
 };
 
 export default SiteContainer;
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 40px 120px 80px 200px;
+  @media (max-width: 1000px) {
+    padding: 40px 30px 80px 30px;
+  }
+`;
