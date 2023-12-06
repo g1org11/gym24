@@ -82,21 +82,27 @@ const HeaderContainer = styled.div`
 `;
 
 const BurgerButton = styled.button`
-  width: 50px;
-  height: 50px;
-  display: none;
   all: unset;
-  @media (max-width: 393px) {
+  display: none;
+  img {
+    height: 25px;
+    width: 25px;
+  }
+
+  @media (max-width: 550px) {
     display: ${(props) => (props.show ? "inline-block" : "none")};
   }
 `;
 
 const XMarkButton = styled.button`
-  height: 50px;
-  width: 50px;
-  display: none;
   all: unset;
-  @media (max-width: 393px) {
+  display: none;
+
+  img {
+    height: 25px;
+    width: 25px;
+  }
+  @media (max-width: 550px) {
     display: ${(props) => (props.show ? "inline-block" : "none")};
   }
 `;
@@ -110,7 +116,11 @@ const Ul = styled.ul`
   display: flex;
   align-items: center;
   list-style-type: none;
-  @media (max-width: 393px) {
+  gap: 70px;
+  @media (max-width: 744px) {
+    gap: 30px;
+  }
+  @media (max-width: 550px) {
     display: none;
   }
 `;
@@ -120,7 +130,7 @@ const Li = styled.li`
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  margin-right: 70px;
+  /* margin-right: 70px; */
 `;
 
 const MenuDiv = styled.div`
