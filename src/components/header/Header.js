@@ -79,6 +79,7 @@ const HeaderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   position: relative;
+  z-index: 110;
 `;
 
 const BurgerButton = styled.button`
