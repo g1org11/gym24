@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import heroimg from "../../assets/hero.png";
 import { defaultTheme } from "../defaultTheme";
+import Reasons from "../reasons/Reasons";
 
 const Hero = () => {
   return (
@@ -81,7 +82,7 @@ const HeroImage = styled.div`
   /* overflow: hidden; */
   img {
     position: absolute;
-    opacity: 60%;
+    opacity: 80%;
 
     top: -560px;
     right: 0;
@@ -116,13 +117,13 @@ const OverlayOne = styled.div`
 `;
 const OverlayTwo = styled.div`
   position: absolute;
-  top: 100px;
-  left: -900px;
+  top: 60px;
+  left: -1000px;
   width: 1043px;
   height: 791px;
   flex-shrink: 0;
   background: linear-gradient(91deg, #000 70.49%, rgba(0, 0, 0, 0) 90.96%);
-  z-index: 13;
+  z-index: 10;
   transform: rotate(-90deg);
   @media (max-width: 744px) {
     top: -100px;
@@ -133,7 +134,7 @@ const OverlayTheee = styled.div`
   top: -600px;
   right: -650px;
   width: 1043px;
-  height: 791px;
+  height: 900px;
   flex-shrink: 0;
   background: linear-gradient(91deg, #000 70.49%, rgba(0, 0, 0, 0) 90.96%);
   z-index: 13;
