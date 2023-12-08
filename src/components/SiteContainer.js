@@ -3,6 +3,7 @@ import Header from "./header/Header";
 import styled from "styled-components";
 import Hero from "./hero/Hero";
 import Reasons from "./reasons/Reasons";
+import Membership from "./membership/Membership";
 
 const SiteContainer = () => {
   return (
@@ -10,6 +11,7 @@ const SiteContainer = () => {
       <Header />
       <Hero />
       <Reasons />
+      <Membership />
     </Container>
   );
 };

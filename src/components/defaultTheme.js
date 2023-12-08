@@ -3,6 +3,7 @@ export const defaultTheme = {
     white: "#FFF",
     black: "#000",
     yellow: "#FAFF00",
+    brown: "#222;",
   },
   background: "#000",
   fonts: {
