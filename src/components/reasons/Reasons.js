@@ -56,16 +56,18 @@ const ReasonsContainer = styled.div`
   }
 `;
 const ReasonsDiv = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 80px 117px;
+  width: 100%;
   @media (max-width: 1000px) {
     gap: 70px 20px;
   }
   @media (max-width: 744px) {
     justify-content: left;
+  }
+  @media (max-width: 393px) {
+    grid-template-columns: 1fr;
   }
 
   img {
