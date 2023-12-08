@@ -5,6 +5,7 @@ import zonesIcon from "../../assets/icon_ fitness zones.svg";
 import timeIcon from "../../assets/icon_time.svg";
 import styled from "styled-components";
 import { defaultTheme } from "../defaultTheme";
+import Reason from "./Reason";
 
 const Reasons = () => {
   return (
@@ -12,37 +13,30 @@ const Reasons = () => {
       <ReasonsTitle>Reasons to join</ReasonsTitle>
       <ReasonWrapper>
         <ReasonsDiv>
-          <img src={lineIcon} alt="lineIcon"></img>
-          <div>
-            <h3>15000 sq.m.</h3>
-            <p>A spacious gym for sports – a safe distance between exercise machines</p>
-          </div>
-        </ReasonsDiv>
-        <ReasonsDiv>
-          <img src={epuipmentIcon} alt="epuipmentIcon"></img>
-          <div>
-            <h3>More than 200 equipment</h3>
-            <p>
-              No queues at the simulators. Premium equipment from LifeStyle, Hammer Strength,
-              TechnoGym.
-            </p>
-          </div>
-        </ReasonsDiv>
-        <ReasonsDiv>
-          <img src={zonesIcon} alt="zonesIcon"></img>
-          <div>
-            <h3>4 fitness zones</h3>
-            <p>
-              From cardio to functional and cycle. Separate area for boxing and mixed martial arts
-            </p>
-          </div>
-        </ReasonsDiv>
-        <ReasonsDiv>
-          <img src={timeIcon} alt="timeIcon"></img>
-          <div>
-            <h3>Round-the-clock operation</h3>
-            <p>The gym is open 24 hours a day, also works on all holidays and weekends</p>
-          </div>
+          <Reason
+            img={lineIcon}
+            title={"15000 sq.m."}
+            text={"A spacious gym for sports – a safe distance between exercise machines"}
+          />
+          <Reason
+            img={epuipmentIcon}
+            title={"More than 200 equipment"}
+            text={
+              "No queues at the simulators. Premium equipment from LifeStyle, Hammer Strength, TechnoGym."
+            }
+          />
+          <Reason
+            img={zonesIcon}
+            title={"4 fitness zones"}
+            text={
+              "From cardio to functional and cycle. Separate area for boxing and mixed martial arts"
+            }
+          />
+          <Reason
+            img={timeIcon}
+            title={"Round-the-clock operation"}
+            text={"The gym is open 24 hours a day, also works on all holidays and weekends"}
+          />
         </ReasonsDiv>
       </ReasonWrapper>
     </ReasonsContainer>
@@ -54,15 +48,31 @@ export default Reasons;
 const ReasonsContainer = styled.div`
   position: relative;
   z-index: 20;
+  @media (max-width: 393px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -100px;
+  }
 `;
 const ReasonsDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 201;
-  max-width: 571px;
+  flex-wrap: wrap;
+  gap: 80px 117px;
+  @media (max-width: 1000px) {
+    gap: 70px 20px;
+  }
+  @media (max-width: 744px) {
+    justify-content: left;
+  }
+
   img {
     padding: 20px;
+    @media (max-width: 1000px) {
+      padding: 10px;
+    }
   }
 
   h3 {
@@ -88,6 +98,9 @@ const ReasonsTitle = styled.h2`
   line-height: normal;
   color: ${defaultTheme.colors.white};
   margin-bottom: 120px;
+  @media (max-width: 393px) {
+    font-size: 24px;
+  }
 `;
 const ReasonWrapper = styled.div`
   display: flex;
