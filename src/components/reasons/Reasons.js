@@ -59,14 +59,14 @@ const ReasonsDiv = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px 117px;
-  width: 100%;
+  /* width: 100%; */
   @media (max-width: 1000px) {
     gap: 70px 20px;
   }
   @media (max-width: 744px) {
     justify-content: left;
   }
-  @media (max-width: 393px) {
+  @media (max-width: 670px) {
     grid-template-columns: 1fr;
   }
 

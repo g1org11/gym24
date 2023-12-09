@@ -139,7 +139,7 @@ const ButtonDiv = styled.div`
   button {
     font-size: 14px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
     color: ${defaultTheme.colors.black};
     background-color: ${defaultTheme.colors.yellow};

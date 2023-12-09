@@ -19,11 +19,14 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  max-width: 550px;
+  width: 550px;
   @media (max-width: 1000px) {
-    max-width: 400px;
+    width: 400px;
   }
   @media (max-width: 744px) {
     max-width: 600px;
+  }
+  @media (max-width: 670px) {
+    max-width: 500px;
   }
 `;
