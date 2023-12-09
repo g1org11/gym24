@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import marks from "../../assets/marks.svg";
 import styled from "styled-components";
 import Member from "./Member";
@@ -101,27 +101,21 @@ const MemberTitle = styled.h1`
 `;
 
 const MemberSlider = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
   gap: 68px;
   padding: 10px;
 
   @media (max-width: 1100px) {
     gap: 56px;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (max-width: 744px) {
     gap: 34px;
   }
-`;
-
-const MobileMemberSlider = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 320px;
-  overflow-x: hiddens;
+  @media (max-width: 620px) {
+    grid-template-columns: 1fr;
+  }
 `;

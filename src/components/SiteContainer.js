@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Hero from "./hero/Hero";
 import Reasons from "./reasons/Reasons";
 import Membership from "./membership/Membership";
+import AboutUs from "./aboutus/AboutUs";
 
 const SiteContainer = () => {
   return (
@@ -12,12 +13,14 @@ const SiteContainer = () => {
       <Hero />
       <Reasons />
       <Membership />
+      <AboutUs />
     </Container>
   );
 };
 
 export default SiteContainer;
 const Container = styled.div`
+  overflow: hidden;
   padding: 40px 120px 80px 200px;
   @media (max-width: 1000px) {
     padding: 40px 30px 80px 30px;
