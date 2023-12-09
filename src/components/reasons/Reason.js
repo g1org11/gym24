@@ -19,9 +19,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 550px;
+  max-width: 550px;
   @media (max-width: 1000px) {
-    width: 400px;
+    max-width: 400px;
   }
   @media (max-width: 744px) {
     max-width: 600px;
