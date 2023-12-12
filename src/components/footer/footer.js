@@ -13,7 +13,10 @@ const Footer = () => {
     <FooterContainer>
       <FooterWrapper>
         <LeftPart>
-          <img src={Logo}></img>
+          <a href="/">
+            <img src={Logo} alt="logo"></img>
+          </a>
+
           <p>
             Build strength and confidence at our gym with state-of-the-art equipment, personalized
             training, and a motivating community
@@ -28,8 +31,8 @@ const Footer = () => {
           <Infos>
             <Info>
               <Imgs>
-                <img src={phone}></img>
-                <img src={email}></img>
+                <img src={phone} alt="img"></img>
+                <img src={email} alt="img"></img>
               </Imgs>
               <Texts>
                 <p>+375(44)-777-24-12</p>

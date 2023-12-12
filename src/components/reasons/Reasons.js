@@ -9,7 +9,7 @@ import Reason from "./Reason";
 
 const Reasons = () => {
   return (
-    <ReasonsContainer>
+    <ReasonsContainer id="reasons">
       <ReasonsTitle>Reasons to join</ReasonsTitle>
       <ReasonWrapper>
         <ReasonsDiv>

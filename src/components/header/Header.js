@@ -5,17 +5,36 @@ import Vector from "../../assets/Vector.png";
 import Xmark from "../../assets/xmark-solid .svg";
 import Logo from "../../assets/GYM24 - logo.png";
 
+import { Link, scroller } from "react-scroll";
+
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+  const scrollToSection = (sectionId) => {
+    scroller.scrollTo(sectionId, {
+      duration: 500,
+      delay: 100,
+      smooth: true,
+      offset: -70,
+    });
+  };
+
+  const handleClicks = () => {
+    scrollToSection("reasons");
+    scrollToSection("membership");
+    scrollToSection("aboutUs");
+    scrollToSection("trainers");
+  };
 
   return (
     <HeaderContainer>
       <LogoDiv>
-        <img src={Logo} alt="GYM24 Logo" />
+        <a href="/">
+          <img src={Logo} alt="GYM24 Logo" />
+        </a>
       </LogoDiv>
       <MenuDiv>
         {/* Display the burger icon by default */}
@@ -34,16 +53,52 @@ const Header = () => {
             <div>
               <ModalUl>
                 <ModalLi>
-                  <a>Advantages</a>
+                  <Link
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    to={"reasons"}
+                  >
+                    Advantages
+                  </Link>
                 </ModalLi>
                 <ModalLi>
-                  <a>Membership</a>
+                  <Link
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    to={"membership"}
+                  >
+                    Membership
+                  </Link>
                 </ModalLi>
                 <ModalLi>
-                  <a>About</a>
+                  <Link
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    to={"aboutUs"}
+                  >
+                    About
+                  </Link>
                 </ModalLi>
                 <ModalLi>
-                  <a>Trainers</a>
+                  <Link
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    to={"trainers"}
+                  >
+                    Trainers
+                  </Link>
                 </ModalLi>
               </ModalUl>
             </div>
@@ -52,16 +107,52 @@ const Header = () => {
         {/* Regular menu items */}
         <Ul>
           <Li>
-            <a>Advantages</a>
+            <Link
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              to={"reasons"}
+            >
+              Advantages
+            </Link>
           </Li>
           <Li>
-            <a>Membership</a>
+            <Link
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              to={"membership"}
+            >
+              Membership
+            </Link>
           </Li>
           <Li>
-            <a>About</a>
+            <Link
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              to={"aboutUs"}
+            >
+              About
+            </Link>
           </Li>
           <Li>
-            <a>Trainers</a>
+            <Link
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              to={"trainers"}
+            >
+              Trainers
+            </Link>
           </Li>
         </Ul>
       </MenuDiv>
@@ -132,15 +223,14 @@ const Li = styled.li`
   font-weight: 300;
   line-height: normal;
   /* margin-right: 70px; */
+  a {
+    text-decoration: none;
+    color: ${defaultTheme.colors.white};
+    cursor: pointer;
+  }
 `;
 
 const MenuDiv = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const IconsDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,4 +260,10 @@ const ModalLi = styled.li`
   line-height: normal;
   color: ${defaultTheme.colors.black};
   margin-bottom: 8px;
+
+  a {
+    text-decoration: none;
+    color: ${defaultTheme.colors.brown};
+    cursor: pointer;
+  }
 `;

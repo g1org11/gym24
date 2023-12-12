@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import heroimg from "../../assets/hero.png";
 import { defaultTheme } from "../defaultTheme";
-import Reasons from "../reasons/Reasons";
 
 const Hero = () => {
   return (

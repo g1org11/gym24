@@ -14,7 +14,7 @@ import Trainer from "./trainer";
 
 const Trainers = () => {
   return (
-    <Container>
+    <Container id="trainers">
       <Wrapper>
         <h1>Trainers staff</h1>
         <TrainersWrapper>

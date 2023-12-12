@@ -36,7 +36,7 @@ const AboutUs = () => {
     };
   }, []);
   return (
-    <Container>
+    <Container id="aboutUs">
       <AboutWrapper>
         <h1>About us</h1>
         <Info>

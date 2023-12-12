@@ -6,7 +6,7 @@ import { defaultTheme } from "../defaultTheme";
 
 const Membership = () => {
   return (
-    <MembershipContainer>
+    <MembershipContainer id="membership">
       <MemberWrapper>
         <MemberTitle>Gym membership</MemberTitle>
 

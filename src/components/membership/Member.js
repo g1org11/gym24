@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { defaultTheme } from "../defaultTheme";
 
 const Member = ({ title, price, icon, textone, texttwo, textthree, textfour }) => {
