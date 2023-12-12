@@ -6,6 +6,7 @@ import Reasons from "./reasons/Reasons";
 import Membership from "./membership/Membership";
 import AboutUs from "./aboutus/AboutUs";
 import Trainers from "./trainers/Trainers";
+import Footer from "./footer/footer";
 
 const SiteContainer = () => {
   return (
@@ -16,6 +17,7 @@ const SiteContainer = () => {
       <Membership />
       <AboutUs />
       <Trainers />
+      <Footer />
     </Container>
   );
 };
