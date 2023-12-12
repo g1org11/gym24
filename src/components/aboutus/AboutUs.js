@@ -5,6 +5,7 @@ import about3 from "../../assets/about-3.png";
 import about4 from "../../assets/about-4.png";
 import { defaultTheme } from "../defaultTheme";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useState, useEffect } from "react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,6 +17,24 @@ import { Pagination, Navigation } from "swiper/modules";
 import styled from "styled-components";
 
 const AboutUs = () => {
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 393);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <Container>
       <AboutWrapper>
@@ -37,44 +56,73 @@ const AboutUs = () => {
           </p>
         </Info>
       </AboutWrapper>
-      <SliderDiv>
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          loop={true}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="swiper-slide"
-          style={{
-            width: "570px",
-            overflow: "hidden",
-            "@media (max-width: 1000px)": {
-              width: "300px",
-            },
-            "@media (max-width: 393px)": {
+      {isMobile ? (
+        <SliderDiv>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="swiper-slide"
+            style={{
               width: "280px",
-            },
-          }}
-        >
-          <div>
-            <SwiperSlide>
-              <img src={about1} alt="img" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={about2} alt="img" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={about3} alt="img" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={about4} alt="img" />
-            </SwiperSlide>
-          </div>
-        </Swiper>
-      </SliderDiv>
+              overflow: "hidden",
+            }}
+          >
+            <div>
+              <SwiperSlide>
+                <img src={about1} alt="img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={about2} alt="img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={about3} alt="img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={about4} alt="img" />
+              </SwiperSlide>
+            </div>
+          </Swiper>
+        </SliderDiv>
+      ) : (
+        <SliderDiv>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="swiper-slide"
+            style={{
+              width: "570px",
+              overflow: "hidden",
+            }}
+          >
+            <div>
+              <SwiperSlide>
+                <img src={about1} alt="img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={about2} alt="img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={about3} alt="img" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={about4} alt="img" />
+              </SwiperSlide>
+            </div>
+          </Swiper>
+        </SliderDiv>
+      )}
     </Container>
   );
 };
