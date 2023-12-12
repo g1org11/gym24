@@ -5,6 +5,7 @@ import Hero from "./hero/Hero";
 import Reasons from "./reasons/Reasons";
 import Membership from "./membership/Membership";
 import AboutUs from "./aboutus/AboutUs";
+import Trainers from "./trainers/Trainers";
 
 const SiteContainer = () => {
   return (
@@ -14,6 +15,7 @@ const SiteContainer = () => {
       <Reasons />
       <Membership />
       <AboutUs />
+      <Trainers />
     </Container>
   );
 };
