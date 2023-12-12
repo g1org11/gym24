@@ -70,11 +70,21 @@ const FooterWrapper = styled.div`
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  @media (max-width: 393px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
 `;
 const LeftPart = styled.div`
   display: flex;
   align-items: start;
   flex-direction: column;
+  @media (max-width: 744px) {
+    display: none;
+  }
   p {
     font-size: 14px;
     font-style: normal;
@@ -91,6 +101,12 @@ const MiddlePart = styled.div`
   display: flex;
   align-items: start;
   flex-direction: column;
+  @media (max-width: 393px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   h4 {
     font-size: 18px;
     font-style: normal;
@@ -114,6 +130,13 @@ const RightPart = styled.div`
   display: flex;
   align-items: start;
   flex-direction: column;
+  @media (max-width: 393px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 47px;
+  }
   h4 {
     font-size: 18px;
     font-style: normal;
@@ -127,6 +150,12 @@ const Infos = styled.div`
   display: flex;
   align-items: start;
   flex-direction: column;
+  @media (max-width: 393px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 `;
 const Info = styled.div`
   display: flex;
@@ -160,6 +189,9 @@ const Cyrcle = styled.div`
   padding: 10px;
   border-radius: 50%;
   margin-top: 20px;
+  @media (max-width: 393px) {
+    margin-top: 31px;
+  }
 `;
 
 const Icons = styled.div`
@@ -169,6 +201,9 @@ const Icons = styled.div`
   gap: 15px;
   ${Cyrcle}:hover {
     border: 1px solid ${defaultTheme.colors.yellow}; // You may adjust the border color accordingly
+  }
+  @media (max-width: 393px) {
+    gap: 24px;
   }
 `;
 const IconImg = styled.img`
