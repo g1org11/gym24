@@ -1,13 +1,12 @@
 import React from "react";
+import { faInstagram, faTwitter, faYoutube, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { defaultTheme } from "../defaultTheme";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import Logo from "../../assets/GYM24 - logo.png";
 import phone from "../../assets/icon_call.svg";
 import email from "../../assets/icon_email.svg";
-import fb from "../../assets/icon_facebook.svg";
-import ig from "../../assets/ig.svg";
-import twiter from "../../assets/twiter.svg";
-import yt from "../../assets/yt.svg";
+
 const Footer = () => {
   return (
     <FooterContainer>
@@ -42,16 +41,16 @@ const Footer = () => {
 
             <Icons>
               <Cyrcle>
-                <IconImg src={ig} alt="Instagram" />
+                <FontAwesomeIcon icon={faInstagram} className="social-icon" />
               </Cyrcle>
               <Cyrcle>
-                <IconImg src={fb} alt="fb" />
+                <FontAwesomeIcon icon={faFacebook} className="social-icon" />
               </Cyrcle>
               <Cyrcle>
-                <IconImg src={twiter} alt="Twitter" />
+                <FontAwesomeIcon icon={faTwitter} className="social-icon" />
               </Cyrcle>
               <Cyrcle>
-                <IconImg src={yt} alt="YouTube" />
+                <FontAwesomeIcon icon={faYoutube} className="social-icon" />
               </Cyrcle>
             </Icons>
           </Infos>
@@ -192,6 +191,19 @@ const Cyrcle = styled.div`
   padding: 10px;
   border-radius: 50%;
   margin-top: 20px;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  .social-icon {
+    color: ${defaultTheme.colors.white};
+    transition: color 0.3s ease-in-out;
+  }
+
+  &:hover {
+    border-color: ${defaultTheme.colors.yellow};
+    .social-icon {
+      color: ${defaultTheme.colors.yellow};
+    }
+  }
   @media (max-width: 393px) {
     margin-top: 31px;
   }
